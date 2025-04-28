@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #282c34;
+}
+.Container{
+    display: flex;
+    justify-content: center;
+}
+.slider_elements i {
+    color: white !important;
+    display: inline-block;
+    vertical-align: middle;
+}
+#btn{
+    position: absolute;
+    top: 3vh;
+    color: #d80ad8;
+    font-size: 5vh;
+    cursor: pointer;
+}
+#home{
+    position: absolute;
+    left: 3vw;
+    top: 4vh;
+    transform: translateX(5px);
+}
+#Attendance{
+    position: absolute;
+    left: 3.5vw;
+    top: 16vh;
+}
+#Tracking{
+    position: absolute;
+    left: 3.5vw;
+    top: 28vh;
+}
+#Student_list{
+    position: absolute;
+    left: 3.5vw;
+    top: 40vh;
+}
+#slider{
+    position: fixed;
+    left: -400px;
+    margin-top: 5%;
+    padding-left: 0px !important;
+    background-color: #d80ad8;
+    box-shadow: 0 0 100px #d80ad8 ;
+    border: 2px solid #d80ad8;
+    z-index: 10;    
+    width: 20vw;
+    height: 100vh;
+    transition: left 500ms linear;
+}
+#slider.active{
+    left: 0px;
+}
+.slider_elements{
+    list-style-type: none;
+    padding: 10%;
+    font-size: 3vh;
+    border-bottom: 1px solid rgba(255,255,255, 0.7);
+}
+.slider_elements a{
+    box-sizing: border-box;
+    padding-left: 30%;
+    width: 100%;
+    color: white !important;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+.slider_elements a:hover{
+    transform: translateX(10px);
+    transition: transform 0.3s ease-out; 
+}
+.Bus_list{
+    overflow:visible;
+    perspective: 800px;
+    float: left;
+    margin-right: 10%;
+}
+#Bus_no1{
+    margin-top: 25% !important;
+}
+.Bus{
+    border: 2px solid #d80ad8;
+    color: white;
+    background-color: #d80ad8;
+    box-shadow: 0 0 8px #d80ad8 ;
+    width: 20vw;
+    border-radius: 10px;
+    height: 8vh;
+    margin: 8% 5% 1% 20%;
+    padding: 3% 2% 3% 30%;
+    font-size: 3.8vh;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out;
+}
+.Bus:hover{
+    transform: translateZ(10px);
+    transition: transform 0.3s ease-out; 
+    position: relative;  
+    z-index: 10;    
+}
+.Bus_rout{
+    float: left;
+    perspective: 800px;
+}
+#Bus_no{
+    margin-top: 17% !important;
+}
+.Rout{
+    border: 2px solid #d80ad8;
+    color: white;
+    background-color: #d80ad8;
+    box-shadow: 0 0 8px #d80ad8 ;
+    width: 30vw;
+    height: 8vh;
+    font-size: 3.8vh;
+    margin: 5.3% 25% 1% 5%;
+    padding: 2% 2% 4% 20%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out;
+}
+.Rout:hover{
+    transform: translateZ(10px);
+    transition: transform 0.3s ease-out; 
+    position: relative;  
+    z-index: 10;    
+}

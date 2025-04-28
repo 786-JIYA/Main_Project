@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/295da72d04.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Students</h1>
+    </div>
+    <div class="search_container">
+        <input type="search" placeholder="       Search For Students" class="search-bar">
+        <i class="fa-solid fa-magnifying-glass" id="search_Icon"></i>
+    </div>
+    <div class="btn"><button class="Add_New"><a href="/" class="ab">+ Add new </a><br><br>
+            <a href="/attendance" class="Attendance">Attendance</a></button></div>
+    <!-- <div class="btn"><button class="Add_New"><a href="http://127.0.0.1:5500/index.html">Attendance</a></button></div> -->
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Div</th>
+            <th>Remove</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Srushti Rajesh Shete</td>
+            <td>F.Y Btech</td>
+            <td>B</td>
+            <td><i class="fa-solid fa-trash"></i></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Srushti Rajesh Shete</td>
+            <td>F.Y Btech</td>
+            <td>B</td>
+            <td><i class="fa-solid fa-trash"></i></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Srushti Rajesh Shete</td>
+            <td>F.Y Btech</td>
+            <td>B</td>
+            <td><i class="fa-solid fa-trash"></i></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Srushti Rajesh Shete</td>
+            <td>F.Y Btech</td>
+            <td>B</td>
+            <td><i class="fa-solid fa-trash"></i></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Srushti Rajesh Shete</td>
+            <td>F.Y Btech</td>
+            <td>B</td>
+            <td><i class="fa-solid fa-trash"></i></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Srushti Rajesh Shete</td>
+            <td>F.Y Btech</td>
+            <td>B</td>
+            <td><i class="fa-solid fa-trash"></i></td>
+        </tr>
+
+        <% users.forEach(function(user){%>
+            <tr>
+                <td>6</td>
+                <td>
+                    <%=user.name%>
+                </td>
+                <td>
+                    <%=user.PRN%>
+                </td>
+                <td>
+                    <%=user.place%>
+                </td>
+                <td><a href="/delete/<%=user._id%>"><i class="fa-solid fa-trash"></i></a></td>
+            </tr>
+            <%}) %>
+
+    </table>
+</body>
+
+</html>

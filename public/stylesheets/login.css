@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Funnel+Display:wght@300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,500;1,500&family=Outfit:wght@100..900&family=Rubik+Wet+Paint&family=Satisfy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* font-family: "Ubuntu", serif; */
+    background-color: #282c34;
+
+
+}
+
+.container {
+
+    border: 1px solid #d80ad8;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    width: 450px;
+    background-color: #d80ad8;
+    box-shadow: 0 0 70px #d80ad8;
+    position: fixed;
+    z-index: 10;
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 29px;
+    color: white;
+}
+
+.input {
+    margin-bottom: 4px;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid rgb(191, 189, 189);
+    outline: 0;
+    display: block;
+    color: #bb03bb;
+
+}
+
+
+
+.input:focus {
+    /* border-color: rgb(9, 165, 226); */
+    border-color: #bb03bb;
+}
+
+.tag {
+    color: rgb(224, 46, 10);
+    /* display: none; */
+    visibility: hidden;
+}
+
+.error {
+    visibility: visible;
+    color: brown;
+}
+
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 19px;
+    margin-top: 10px;
+    color: white;
+}
+
+.input.correct {
+    border-color: rgb(82, 246, 0);
+}
+
+.input.incorrect {
+    border-color: rgb(229, 70, 2);
+    visibility: visible;
+}
+
+.submit {
+    width: 100%;
+    font-size: 19px;
+    display: block;
+    color: #d80ad8;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #d80ad8;
+    background-color: white;
+    margin-top: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.click {
+    width: 100%;
+    font-size: 19px;
+    display: block;
+    color: #d80ad8;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #d80ad8;
+    background-color: white;
+    margin-top: 15px;
+
+}
+
+.hiddenclick {
+    display: none;
+}
+
+small {
+    color: red;
+    visibility: hidden;
+    margin-bottom: 10px;
+    position: absolute;
+}
+
+.input.incorrect small {
+    visibility: visible;
+}
+
+/*Login page*/
