@@ -6,7 +6,7 @@ A real-time web application that uses **RFID** and **GPS** modules with **ESP826
 
 ## 📸 Demo
 
-[▶️ Watch Demo Video](https://drive.google.com/file/d/1M7FiNVUVy_o0hiqxT_HiZlMzttHVzror/view?usp=drive_link)
+[▶️ Watch Demo Video](https://drive.google.com/file/d/1qUHn371Ztv5CWlDLDjsR9tMYahla1k8f/view?usp=drive_link)
 
 ---
 
