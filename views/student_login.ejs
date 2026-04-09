@@ -17,11 +17,12 @@
     <!-- TOP NAVIGATION -->
     <nav>
         <p class="welcome">Log in to get started</p>
-        <img src="logo.png" alt="Logo" class="logo" />
+        <h2 class="h2">Enter Place and PRN &rarr;</h2>
+
         <form class="login">
-            <input type="text" placeholder="user" class="login__input login__input--user" />
+            <input type="text" placeholder="Place" class="login__input login__input--user" />
             <!-- In practice, use type="password" -->
-            <input type="text" placeholder="PIN" maxlength="4" class="login__input login__input--pin" />
+            <input type="text" placeholder="PRN" maxlength="4" class="login__input login__input--pin" />
             <button class="login__btn">&rarr;</button>
             <div class="container">
 
@@ -86,14 +87,15 @@
             <h2>Track Bus</h2>
             <form class="form form--loan">
                 <input type="number" class="form__input form__input--loan-amount" />
-                <button class="form__btn form__btn--loan"><a href="https://tracking-r5ir.onrender.com/location"> Go
+                <button class="form__btn form__btn--loan"><a href="https://tracking-r5ir.onrender.com/location"
+                        class="Go"> Go
                     </a></button>
-                <label class="form__label form__label--loan">Ticket</label>
+                <label class="form__label form__label--loan">Enter Bus No. to track</label>
             </form>
         </div>
 
         <!-- OPERATION: CLOSE -->
-        <div class="operation operation--close">
+        <!-- <div class="operation operation--close">
             <h2>Generate pass</h2>
             <form class="form form--close">
                 <input type="text" class="form__input form__input--user" />
@@ -102,7 +104,7 @@
                 <label class="form__label">Confirm user</label>
                 <label class="form__label">Confirm PIN</label>
             </form>
-        </div>
+        </div> -->
 
         <!--Expense Tracker-->
         <div class="expense expense-tracker">

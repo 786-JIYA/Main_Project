@@ -17,6 +17,16 @@ body {
     padding: 2rem;
 }
 
+.Go {
+    text-decoration: none;
+    color: black;
+}
+
+.h2 {
+    margin-top: 15px;
+    margin-left: 300px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -35,15 +45,18 @@ nav {
 
 .login {
     display: flex;
+    translate: -100px;
+
 }
 
 .login__input {
+
     border: none;
     padding: 0.5rem 2rem;
     font-size: 1.6rem;
     font-family: inherit;
     text-align: center;
-    width: 12rem;
+    width: 15rem;
     border-radius: 10rem;
     margin-right: 1rem;
     color: inherit;

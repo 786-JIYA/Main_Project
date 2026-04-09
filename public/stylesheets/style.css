@@ -13,7 +13,7 @@ body {
 
 body {
     background-color: #282c34;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 }
 
@@ -73,6 +73,7 @@ body {
     top: 12.8%;
     left: 82%;
     float: right;
+    text-decoration: none;
 }
 
 Add_New:hover {
@@ -132,4 +133,8 @@ th {
 .a {
     color: #ccc;
 
+}
+
+.fa-trash {
+    color: white;
 }

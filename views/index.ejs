@@ -10,23 +10,35 @@
 </head>
 
 <body>
+    <i class="fas fa-bars" id="btn"></i>
     <div class="heading">
-        <h1>Students</h1>
+        <h1>Add New Students</h1>
     </div>
     <div class="search_container">
         <form action="/create" method="post">
+            <div class="label" class="label"> Student name :</div>
             <input type="text" placeholder="Student name" name="name" class="search-bar">
+            <div class="label" class="label"> PRN :</div>
             <input type="text" placeholder="PRN" name="PRN" class="search-bar">
+            <div class="label" class="label"> Place :</div>
             <input type="text" placeholder="Place" name="place" class="search-bar">
-            <div class="btn"><button class="Add_New" type="submit" value="create user">create</button></div>
+            <div class="btn"><button class="Add_New" type="submit" value="create user">Create</button></div>
         </form>
     </div>
-
+    <!-- 
     <a href="/read" class="a">Back to student list</a><br>
     <a href="/list" class="a">Bus list</a><br>
     <a href="http://127.0.0.1:5500/index.html" class="a">Attendance</a>
-
-
+ -->
+    </div>
+    <div id="slider">
+        <li class="slider_elements"><i class="fa-solid fa-book" id="Attendance1"></i><a href="/read" class="a">Back to
+                student list</a></li>
+        <li class="slider_elements"><i class="fa-solid fa-book" id="Attendance2"></i><a href="/list" class="a">Bus
+                list</a></li>
+        <li class="slider_elements"><i class="fa-solid fa-book" id="Attendance3"></i><a
+                href="http://localhost:3002/attendance" class="a">Attendance</a></li>
+    </div>
 </body>
 
 </html>

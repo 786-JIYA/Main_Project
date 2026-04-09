@@ -6,21 +6,21 @@
 
 // Data
 const account1 = {
-    owner: "nagpur",
-    movements: ["4:30", "10:00", "02:00", "03:00", "03:45", "4:00"],
+    owner: "sangli",
+    movements: ["4", "10", "2", "12", "15"],
     interestRate: 1.2, // %
     pin: 1111,
 };
 
 const account2 = {
-    owner: 'mumbai',
-    movements: ["8:20", "10:45", "11:30", "04:45", "09:45"],
+    owner: 'kolhapur',
+    movements: ["8", "11", "3", "5", "18"],
     interestRate: 1.5,
     pin: 2222,
 };
 
 const account3 = {
-    owner: "kolhapur",
+    owner: "jaisingpur",
     movements: ["7:30", "08:00", "09:40", "05:00", "09:45", "10:00"],
     interestRate: 0.7,
     pin: 3333,
@@ -28,7 +28,7 @@ const account3 = {
 };
 
 const account4 = {
-    owner: 'sangli',
+    owner: 'kagal',
     movements: ["4:30", "10:00", "7:00", "05:00", "09:45"],
     interestRate: 1,
     pin: 4444,
@@ -36,7 +36,7 @@ const account4 = {
 
 const sanglitokolhapur = {
     owner: 'sangli',
-    movements: ["6:30 pm", "6:00 am", "7:00 pm", "05:00 pm", "06:45 pm", "7:00 am", "8:00 am"],
+    movements: ["Bus No.4", "Bus No.2", "Bus No.12", "Bus No.1", "Bus No.10", "Bus No.5"],
     interestRate: 71,
     pin: 4444,
 }
@@ -115,12 +115,6 @@ const showMovements = function (movements) {
 const createusername = function (accs) {
     accs.forEach(acc => {
         acc.username = acc.owner
-            .toLowerCase().
-            split(" ").
-            map((name) => {
-                return name[0]
-            })
-            .join('');
 
     });
 
@@ -280,7 +274,7 @@ btnTransfer.addEventListener("click", function (h) {
         showMovements(sanglitokolhapur.movements);
         const hl = ` <div class="movements">
         <div class="movements__row">
-            
+           
            <div class="movements__value"> ${inputTransferFrom.value} → ${inputTransferWhere.value} at</div>
             <div class="movements__value">${mov}</div>
         </div>`

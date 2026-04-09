@@ -1,21 +1,38 @@
 body {
-    font-family: Arial;
-    padding: 20px;
-  }
+  margin-top: 50px;
+  font-family: Arial;
+  padding: 20px;
+  background-color: whitesmoke;
+}
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 20px;
-  }
+table {
 
-  th,
-  td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-  }
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 60px;
+}
 
-  th {
-    background-color: #f4f4f4;
-  }
+h1 {
+  color: rgb(1, 0, 0);
+  margin-bottom: 60px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+.allattendance {
+  text-decoration: none;
+  color: white;
+  background-color: gray;
+  padding: 20px 20px;
+  border-radius: 8px;
+
+}

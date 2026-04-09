@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <i class="fas fa-bars" id="btn"></i>
     <div class="heading">
         <h1>Students</h1>
     </div>
@@ -22,58 +23,20 @@
     <!-- <div class="btn"><button class="Add_New"><a href="http://127.0.0.1:5500/index.html">Attendance</a></button></div> -->
     <table>
         <tr>
-            <th>Id</th>
+
             <th>Name</th>
-            <th>Year</th>
-            <th>Div</th>
+            <th>PRN</th>
+            <th>Place</th>
             <th>Remove</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Srushti Rajesh Shete</td>
-            <td>F.Y Btech</td>
-            <td>B</td>
-            <td><i class="fa-solid fa-trash"></i></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Srushti Rajesh Shete</td>
-            <td>F.Y Btech</td>
-            <td>B</td>
-            <td><i class="fa-solid fa-trash"></i></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Srushti Rajesh Shete</td>
-            <td>F.Y Btech</td>
-            <td>B</td>
-            <td><i class="fa-solid fa-trash"></i></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Srushti Rajesh Shete</td>
-            <td>F.Y Btech</td>
-            <td>B</td>
-            <td><i class="fa-solid fa-trash"></i></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Srushti Rajesh Shete</td>
-            <td>F.Y Btech</td>
-            <td>B</td>
-            <td><i class="fa-solid fa-trash"></i></td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Srushti Rajesh Shete</td>
-            <td>F.Y Btech</td>
-            <td>B</td>
-            <td><i class="fa-solid fa-trash"></i></td>
-        </tr>
+
+
+
+
 
         <% users.forEach(function(user){%>
             <tr>
-                <td>6</td>
+
                 <td>
                     <%=user.name%>
                 </td>
