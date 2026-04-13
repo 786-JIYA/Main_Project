@@ -302,6 +302,10 @@ app.get("/allattendance", (req, res) => {
     res.render("allattendance");
 });
 
+app.get("/index", (req, res) => {
+    res.render("index");
+});
+
 
 // =========================
 // STATIC BUS STOPS PAGE
