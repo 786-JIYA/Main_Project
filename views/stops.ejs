@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Stops</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h2 {
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      margin: 0;
+    }
+
+    h3 {
+      margin-top: 20px;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      max-width: 400px;
+    }
+
+    li {
+      background: white;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background: #3498db;
+      color: white;
+      transform: scale(1.03);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h2>🚌 Bus No: <%= busNo %></h2>
+
+  <h3>Stops List:</h3>
+
+  <ul>
+    <% stops.forEach(function(stop) { %>
+      <li>
+       <a href="https://tracking-r5ir.onrender.com/" target="_blank">
+  <%= stop %>
+</a>
+      </li>
+    <% }); %>
+  </ul>
+
+</body>
+</html>

@@ -170,6 +170,20 @@ app.get("/login", (req, res) => res.render("login"));
 app.get("/attendance", (req, res) => res.render("attendance"));
 app.get("/allattendance", (req, res) => res.render("allattendance"));
 
+app.get("/stops", (req, res) => {
+  const stops = [
+    "Shivaji Nagar",
+    "Railway Station",
+    "Market Yard",
+    "College"
+  ];
+
+  res.render("stops", {
+    busNo: "MH-09-1234",
+    stops: stops
+  });
+});
+
 // CRUD
 app.get("/delete/:id", async (req, res) => {
     await userModel.findOneAndDelete({ _id: req.params.id });

@@ -87,6 +87,13 @@ const currencies = new Map([
     ['GBP', 'Pound sterling'],
 ]);
 
+//Bismillah-Stops
+const stop = {
+  name: "Market Yard",
+  lat: 16.7105,
+  lng: 74.2500
+};
+
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
@@ -95,14 +102,13 @@ const showMovements = function (movements) {
     movements.forEach(function (mov, i) {
 
         const type = mov > 0 ? 'deposit' : 'withdrawal';
-        const html = ` <div class="movements">
+        const html = ` 
             <div class="movements__row">
-                 <div class="movements__value">${inputTransferFrom.value} ➡️ ${inputTransferWhere.value} </div>
+                 <div class="movements__value" id="stopNo">${inputTransferFrom.value}    ➡️      ${inputTransferWhere.value} </div>
                   <div class="movements__value">  ${mov}</div>
-                </div>
-             
-                 
-            </div>`
+                </div>`
+
+                
         //<div class="movements__value">${mov}</div>
         containerMovements.insertAdjacentHTML('afterbegin', html);
 
@@ -270,7 +276,7 @@ let senderaccount;
 btnTransfer.addEventListener("click", function (h) {
     h.preventDefault();
     if (inputTransferFrom.value == "sangli" && inputTransferWhere.value == "college") {
-        // labelBalance.innerHTML = `Rate : ${sanglitokolhapur.interestRate}₹`;
+        
         showMovements(sanglitokolhapur.movements);
         const hl = ` <div class="movements">
         <div class="movements__row">
@@ -293,7 +299,6 @@ btnTransfer.addEventListener("click", function (h) {
 
         containerMovements.insertAdjacentHTML('afterbegin', hl);
 
-
     }
     labelBalance.innerHTML = `Rate : ${Punetomumbai.interestRate}₹`;
     showMovements(Punetomumbai.movements);
@@ -309,4 +314,19 @@ btnTransfer.addEventListener("click", function (h) {
 
 }
 )
+//Bismillah Hir-Rahmaan Nir-Raheem
+//09/04/2026
+
+containerMovements.addEventListener("click", function (e) {
+  const row = e.target.closest(".movements__row");
+
+  if (!row) return;
+
+  const index = row.dataset.index;
+
+  console.log("Clicked row:", index);
+
+  // redirect to another page
+  window.location.href = `/stops`;
+});
 
