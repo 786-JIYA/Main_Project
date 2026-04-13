@@ -1,110 +1,210 @@
+// // const express = require('express');
+// // const app = express();
+// // const path = require("path");
+// // const mongoose = require('mongoose');
+
+// // const userModel = require('./models/user');
+
+// // const cors = require('cors');
+// // const bodyParser = require('body-parser');
+// // const Attendance = require('./models/attendance');
+
+
+// // app.use(cors());
+// // app.use(bodyParser.json());
+
+// // app.set("view engine", "ejs");
+
+// // // const userModel = require("./usermodel");
+
+// // app.use(express.json());
+// // app.use(express.urlencoded({ extended: true }));
+
+// // app.use(express.static(path.join(__dirname, "public")));
+
+// // app.get("/", (req, res) => {
+// //     res.render("index");
+// // })
+
+// // app.get("/read", async (req, res) => {
+// //     let users = await userModel.find();
+
+// //     res.render("read", { users });
+// // })
+
+// // app.get("/list", (req, res) => {
+
+
+// //     res.render("buslist");
+// // })
+
+// // app.get("/main", (req, res) => {
+
+
+// //     res.render("main");
+// // })
+
+// // app.get("/student_login", (req, res) => {
+
+
+// //     res.render("student_login");
+// // })
+
+// // app.get("/Slist", (req, res) => {
+
+
+// //     res.render("Slist");
+// // })
+
+// // app.get("/login", (req, res) => {
+
+
+// //     res.render("login");
+// // })
+
+// // app.get("/attendance", (req, res) => {
+
+
+// //     res.render("attendance");
+// // })
+
+// // app.get("/allattendance", (req, res) => {
+
+
+// //     res.render("allattendance");
+// // })
+
+// // app.get("/delete/:id", async (req, res) => {
+// //     let users = await userModel.findOneAndDelete({
+// //         _id: req.params.id
+// //     });
+
+// //     res.redirect("/read");
+// // })
+
+
+// // app.post("/create", async (req, res) => {
+// //     let { name, PRN, place } = req.body;
+// //     let createduser = await userModel.create({
+// //         name,
+// //         PRN,
+// //         place
+// //     })
+// //     res.redirect("/read");
+// // })
+
+
+
+
+
+// // mongoose.connect('mongodb://127.0.0.1:27017/rfid_attendance', {
+// //     useNewUrlParser: true,
+// //     useUnifiedTopology: true,
+// // })
+// // .then(() => console.log("MongoDB Connected"))
+// // .catch(err => console.error("MongoDB Connection Error:", err));
+
+
+// // app.post('/api/attendance', async (req, res) => {
+// //     const { uid, time } = req.body;
+// //     try {
+// //         const record = new Attendance({ uid, time });
+// //         await record.save();
+// //         res.status(201).send("Attendance Recorded");
+// //     } catch (err) {
+// //         res.status(500).send("Error saving attendance");
+// //     }
+// // });
+
+// // app.get('/api/attendance', async (req, res) => {
+// //     try {
+// //         const data = await Attendance.find();
+// //         res.json(data);
+// //     } catch (err) {
+// //         res.status(500).send("Error fetching data");
+// //     }
+// // });
+
+// // app.listen(3002);
+
 // const express = require('express');
 // const app = express();
 // const path = require("path");
 // const mongoose = require('mongoose');
+// require('dotenv').config(); 
+// const cors = require('cors');
 
+// // Models
+// const Attendance = require('./models/attendance');
 // const userModel = require('./models/user');
 
-// const cors = require('cors');
-// const bodyParser = require('body-parser');
-// const Attendance = require('./models/attendance');
-
-
+// // Middleware
 // app.use(cors());
-// app.use(bodyParser.json());
-
-// app.set("view engine", "ejs");
-
-// // const userModel = require("./usermodel");
-
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 
+// // View engine
+// app.set("view engine", "ejs");
 // app.use(express.static(path.join(__dirname, "public")));
 
-// app.get("/", (req, res) => {
-//     res.render("index");
-// })
+// // --- MongoDB Connection (only once!) ---
+// // mongoose.connect('mongodb://127.0.0.1:27017/rfid_attendance', {
+// //     useNewUrlParser: true,
+// //     useUnifiedTopology: true,
+// // })
+// // .then(() => console.log("MongoDB Connected"))
+// // .catch(err => console.error("MongoDB Connection Error:", err));
 
+// //Bismillah Hir-rahman Nir-Raheem
+// require('dotenv').config();
+
+// mongoose.connect(process.env.MONGO_URI)
+// .then(() => console.log("MongoDB Connected"))
+// .catch(err => console.log("MongoDB Connection Error:", err));
+
+// // --- Routes ---
+
+// // EJS Pages
+// app.get("/", (req, res) => res.render("index"));
 // app.get("/read", async (req, res) => {
-//     let users = await userModel.find();
-
+//     const users = await userModel.find();
 //     res.render("read", { users });
-// })
+// });
+// app.get("/list", (req, res) => res.render("buslist"));
+// app.get("/main", (req, res) => res.render("main"));
+// app.get("/student_login", (req, res) => res.render("student_login"));
+// app.get("/Slist", (req, res) => res.render("Slist"));
+// app.get("/login", (req, res) => res.render("login"));
+// app.get("/attendance", (req, res) => res.render("attendance"));
+// app.get("/allattendance", (req, res) => res.render("allattendance"));
 
-// app.get("/list", (req, res) => {
+// app.get("/stops", (req, res) => {
+//   const stops = [
+//     "Shivaji Nagar",
+//     "Railway Station",
+//     "Market Yard",
+//     "College"
+//   ];
 
+//   res.render("stops", {
+//     busNo: "MH-09-1234",
+//     stops: stops
+//   });
+// });
 
-//     res.render("buslist");
-// })
-
-// app.get("/main", (req, res) => {
-
-
-//     res.render("main");
-// })
-
-// app.get("/student_login", (req, res) => {
-
-
-//     res.render("student_login");
-// })
-
-// app.get("/Slist", (req, res) => {
-
-
-//     res.render("Slist");
-// })
-
-// app.get("/login", (req, res) => {
-
-
-//     res.render("login");
-// })
-
-// app.get("/attendance", (req, res) => {
-
-
-//     res.render("attendance");
-// })
-
-// app.get("/allattendance", (req, res) => {
-
-
-//     res.render("allattendance");
-// })
-
+// // CRUD
 // app.get("/delete/:id", async (req, res) => {
-//     let users = await userModel.findOneAndDelete({
-//         _id: req.params.id
-//     });
-
+//     await userModel.findOneAndDelete({ _id: req.params.id });
 //     res.redirect("/read");
-// })
-
+// });
 
 // app.post("/create", async (req, res) => {
-//     let { name, PRN, place } = req.body;
-//     let createduser = await userModel.create({
-//         name,
-//         PRN,
-//         place
-//     })
+//     const { name, PRN, place } = req.body;
+//     await userModel.create({ name, PRN, place });
 //     res.redirect("/read");
-// })
+// });
 
-
-
-
-
-// mongoose.connect('mongodb://127.0.0.1:27017/rfid_attendance', {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-// })
-// .then(() => console.log("MongoDB Connected"))
-// .catch(err => console.error("MongoDB Connection Error:", err));
-
-
+// // --- API for ESP32 / Postman ---
 // app.post('/api/attendance', async (req, res) => {
 //     const { uid, time } = req.body;
 //     try {
@@ -112,6 +212,7 @@
 //         await record.save();
 //         res.status(201).send("Attendance Recorded");
 //     } catch (err) {
+//         console.error(err);
 //         res.status(500).send("Error saving attendance");
 //     }
 // });
@@ -121,17 +222,23 @@
 //         const data = await Attendance.find();
 //         res.json(data);
 //     } catch (err) {
+//         console.error(err);
 //         res.status(500).send("Error fetching data");
 //     }
 // });
 
-// app.listen(3002);
+// // --- Start Server ---
+
+// app.listen(3002, '0.0.0.0', () => {
+//   console.log("Server running");
+// });
 
 const express = require('express');
 const app = express();
 const path = require("path");
 const mongoose = require('mongoose');
 const cors = require('cors');
+require('dotenv').config();   // ✅ ONLY ONCE
 
 // Models
 const Attendance = require('./models/attendance');
@@ -146,61 +253,117 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
-// --- MongoDB Connection (only once!) ---
-mongoose.connect('mongodb://127.0.0.1:27017/rfid_attendance', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-.then(() => console.log("MongoDB Connected"))
-.catch(err => console.error("MongoDB Connection Error:", err));
+// =========================
+// MongoDB Connection
+// =========================
+mongoose.connect(process.env.MONGO_URI)
+.then(() => console.log("MongoDB Connected 🚀"))
+.catch(err => console.error("MongoDB Connection Error:", err.message));
 
-// --- Routes ---
 
-// EJS Pages
-app.get("/", (req, res) => res.render("index"));
+// =========================
+// EJS PAGES ROUTES
+// =========================
+
+app.get("/", (req, res) => {
+    res.redirect("/main");   // ✅ now home goes to main
+});
+
+app.get("/main", (req, res) => {
+    res.render("main");
+});
+
 app.get("/read", async (req, res) => {
     const users = await userModel.find();
     res.render("read", { users });
 });
-app.get("/list", (req, res) => res.render("buslist"));
-app.get("/main", (req, res) => res.render("main"));
-app.get("/student_login", (req, res) => res.render("student_login"));
-app.get("/Slist", (req, res) => res.render("Slist"));
-app.get("/login", (req, res) => res.render("login"));
-app.get("/attendance", (req, res) => res.render("attendance"));
-app.get("/allattendance", (req, res) => res.render("allattendance"));
+
+app.get("/list", (req, res) => {
+    res.render("buslist");
+});
+
+app.get("/student_login", (req, res) => {
+    res.render("student_login");
+});
+
+app.get("/Slist", (req, res) => {
+    res.render("Slist");
+});
+
+app.get("/login", (req, res) => {
+    res.render("login");
+});
+
+app.get("/attendance", (req, res) => {
+    res.render("attendance");
+});
+
+app.get("/allattendance", (req, res) => {
+    res.render("allattendance");
+});
+
+
+// =========================
+// STATIC BUS STOPS PAGE
+// =========================
 
 app.get("/stops", (req, res) => {
-  const stops = [
-    "Shivaji Nagar",
-    "Railway Station",
-    "Market Yard",
-    "College"
-  ];
+    const stops = [
+        "Shivaji Nagar",
+        "Railway Station",
+        "Market Yard",
+        "College"
+    ];
 
-  res.render("stops", {
-    busNo: "MH-09-1234",
-    stops: stops
-  });
+    res.render("stops", {
+        busNo: "MH-09-1234",
+        stops
+    });
 });
 
-// CRUD
+
+// =========================
+// CRUD OPERATIONS
+// =========================
+
+// Delete user
 app.get("/delete/:id", async (req, res) => {
-    await userModel.findOneAndDelete({ _id: req.params.id });
-    res.redirect("/read");
-});
-
-app.post("/create", async (req, res) => {
-    const { name, PRN, place } = req.body;
-    await userModel.create({ name, PRN, place });
-    res.redirect("/read");
-});
-
-// --- API for ESP32 / Postman ---
-app.post('/api/attendance', async (req, res) => {
-    const { uid, time } = req.body;
     try {
-        const record = new Attendance({ uid, time });
+        await userModel.findByIdAndDelete(req.params.id);
+        res.redirect("/read");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Delete Error");
+    }
+});
+
+// Create user
+app.post("/create", async (req, res) => {
+    try {
+        const { name, PRN, place } = req.body;
+        await userModel.create({ name, PRN, place });
+        res.redirect("/read");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Create Error");
+    }
+});
+
+
+// =========================
+// ATTENDANCE API (ESP8266 / ESP32)
+// =========================
+
+// POST attendance
+app.post('/api/attendance', async (req, res) => {
+    try {
+        const { uid, time } = req.body;
+
+        const record = new Attendance({
+            uid,
+            time: time || new Date()
+        });
+
         await record.save();
         res.status(201).send("Attendance Recorded");
     } catch (err) {
@@ -209,9 +372,10 @@ app.post('/api/attendance', async (req, res) => {
     }
 });
 
+// GET attendance
 app.get('/api/attendance', async (req, res) => {
     try {
-        const data = await Attendance.find();
+        const data = await Attendance.find().sort({ _id: -1 });
         res.json(data);
     } catch (err) {
         console.error(err);
@@ -219,8 +383,13 @@ app.get('/api/attendance', async (req, res) => {
     }
 });
 
-// --- Start Server ---
 
-app.listen(3002, '0.0.0.0', () => {
-  console.log("Server running");
+// =========================
+// START SERVER
+// =========================
+
+const PORT = process.env.PORT || 3002;
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on port ${PORT} 🚀`);
 });
