@@ -62,14 +62,14 @@
   <h3>Stops List:</h3>
 
   <ul>
-    <% stops.forEach(function(stop) { %>
-      <li>
-       <a href="https://tracking-r5ir.onrender.com/" target="_blank">
-  <%= stop %>
-</a>
-      </li>
-    <% }); %>
-  </ul>
+  <% stops.forEach(function(stop) { %>
+    <li>
+      <a href="https://tracking-r5ir.onrender.com/<%= stop.route %>" target="_blank">
+        <%= stop.name %>
+      </a>
+    </li>
+  <% }); %>
+</ul>
 
 </body>
 </html>

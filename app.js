@@ -257,8 +257,8 @@ app.use(express.static(path.join(__dirname, "public")));
 // MongoDB Connection
 // =========================
 mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log("MongoDB Connected 🚀"))
-.catch(err => console.error("MongoDB Connection Error:", err.message));
+    .then(() => console.log("MongoDB Connected 🚀"))
+    .catch(err => console.error("MongoDB Connection Error:", err.message));
 
 
 // =========================
@@ -312,11 +312,11 @@ app.get("/index", (req, res) => {
 // =========================
 
 app.get("/stops", (req, res) => {
-    const stops = [
-        "Shivaji Nagar",
-        "Railway Station",
-        "Market Yard",
-        "College"
+    stops = [
+        { name: "Market Yard", route: "market-yard" },
+        { name: "Railway Station", route: "railway-station" },
+        { name: "Bus Stand", route: "bus-stand" },
+        { name: "DKTE", route: "dkte-college" }
     ];
 
     res.render("stops", {
