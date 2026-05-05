@@ -10,35 +10,52 @@
 </head>
 
 <body>
-    <i class="fas fa-bars" id="btn"></i>
-    <div class="heading">
-        <h1>Add New Students</h1>
+
+    <div class="main">
+
+        <!-- SIDEBAR -->
+        <aside id="sidebar">
+            <h2 class="logo">🚌 Smart Bus</h2>
+
+            <ul>
+                <li><a href="/read"><i class="fa-solid fa-users"></i> Students</a></li>
+                <li><a href="/list"><i class="fa-solid fa-bus"></i> Bus List</a></li>
+                <li><a href="/attendance"><i class="fa-solid fa-clipboard-check"></i> Attendance</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+
+            <div class="center-box"> <!-- NEW WRAPPER -->
+
+                <header class="page-header">
+                    <h1>Add New Student</h1>
+                </header>
+
+                <div class="form-card">
+                    <form action="/create" method="post">
+
+                        <label>Student Name</label>
+                        <input type="text" name="name" placeholder="Enter student name" required>
+
+                        <label>PRN</label>
+                        <input type="text" name="PRN" placeholder="Enter PRN" required>
+
+                        <label>Place</label>
+                        <input type="text" name="place" placeholder="Enter place" required>
+
+                        <button type="submit">➕ Add Student</button>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-    <div class="search_container">
-        <form action="/create" method="post">
-            <div class="label" class="label"> Student name :</div>
-            <input type="text" placeholder="Student name" name="name" class="search-bar">
-            <div class="label" class="label"> PRN :</div>
-            <input type="text" placeholder="PRN" name="PRN" class="search-bar">
-            <div class="label" class="label"> Place :</div>
-            <input type="text" placeholder="Place" name="place" class="search-bar">
-            <div class="btn"><button class="Add_New" type="submit" value="create user">Create</button></div>
-        </form>
-    </div>
-    <!-- 
-    <a href="/read" class="a">Back to student list</a><br>
-    <a href="/list" class="a">Bus list</a><br>
-    <a href="http://127.0.0.1:5500/index.html" class="a">Attendance</a>
- -->
-    </div>
-    <div id="slider">
-        <li class="slider_elements"><i class="fa-solid fa-book" id="Attendance1"></i><a href="/read" class="a">Back to
-                student list</a></li>
-        <li class="slider_elements"><i class="fa-solid fa-book" id="Attendance2"></i><a href="/list" class="a">Bus
-                list</a></li>
-        <li class="slider_elements"><i class="fa-solid fa-book" id="Attendance3"></i><a
-                href="http://localhost:3002/attendance" class="a">Attendance</a></li>
-    </div>
+
 </body>
 
 </html>

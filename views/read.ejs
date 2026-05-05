@@ -10,47 +10,63 @@
 </head>
 
 <body>
-    <i class="fas fa-bars" id="btn"></i>
-    <div class="heading">
+
+    <!-- TOP BAR -->
+    <div class="actions">
+        <a href="/index" class="btn add-btn">
+            <i class="fa-solid fa-user-plus"></i> Add Student
+        </a>
+
+        <a href="https://bus-dashboard.onrender.com/attendance" class="btn attendance-btn">
+            <i class="fa-solid fa-clipboard-check"></i> Attendance
+        </a>
+    </div>
+
+    <!-- PAGE TITLE + SEARCH -->
+    <section class="controls">
         <h1>Students</h1>
-    </div>
-    <div class="search_container">
-        <input type="search" placeholder="       Search For Students" class="search-bar">
-        <i class="fa-solid fa-magnifying-glass" id="search_Icon"></i>
-    </div>
-    <div class="btn"><button class="Add_New"><a href="/index" class="ab">+ Add new </a><br><br>
-            <a href="https://bus-dashboard.onrender.com/attendance" class="Attendance">Attendance</a></button></div>
-    <!-- <div class="btn"><button class="Add_New"><a href="http://127.0.0.1:5500/index.html">Attendance</a></button></div> -->
-    <table>
-        <tr>
 
-            <th>Name</th>
-            <th>PRN</th>
-            <th>Place</th>
-            <th>Remove</th>
-        </tr>
+        <div class="search_container">
+            <input type="search" placeholder="Search students..." class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </section>
 
+    <!-- TABLE CARD -->
+    <section class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>PRN</th>
+                    <th>Place</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
 
+            <tbody>
+                <% users.forEach(function(user){ %>
+                    <tr>
+                        <td>
+                            <%= user.name %>
+                        </td>
+                        <td>
+                            <%= user.PRN %>
+                        </td>
+                        <td>
+                            <%= user.place %>
+                        </td>
+                        <td>
+                            <a href="/delete/<%=user._id%>" class="delete-btn">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </section>
 
-
-
-        <% users.forEach(function(user){%>
-            <tr>
-
-                <td>
-                    <%=user.name%>
-                </td>
-                <td>
-                    <%=user.PRN%>
-                </td>
-                <td>
-                    <%=user.place%>
-                </td>
-                <td><a href="/delete/<%=user._id%>"><i class="fa-solid fa-trash"></i></a></td>
-            </tr>
-            <%}) %>
-
-    </table>
 </body>
 
 </html>

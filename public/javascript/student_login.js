@@ -1,8 +1,5 @@
 'use strict';
 
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// BANKIST APP
 
 // Data
 const account1 = {
@@ -157,59 +154,8 @@ const checkMax = account2.movements.reduce((acc, mov) => {
     else return mov;
 
 }, account2.movements[0])
-// console.log(checkMax)
-
-// //////////////challenge-2/////////////
-// const dog1 = [5, 2, 4, 1, 15, 8, 3];
-// const dog2 = [16, 6, 10, 5, 6, 1, 4];
 
 
-
-// const two = 2;
-// const hello = dog2.map(function (dog) {
-//     if (dog <= 2) {
-
-//         const humanage = dog * 2;
-//         return humanage;
-//     } else {
-//         const humanage = dog * 4 + 16;
-//         return humanage
-//     }
-// });
-
-
-// const sorted = hello.filter(function (h) {
-//     return h >= 18;
-// })
-// console.log(sorted)
-
-// const sum = sorted.reduce((acc, ele) =>
-//     acc + ele / sorted.length, 0)
-// console.log(sum)
-
-
-
-
-
-
-
-// showMovements(account1.movements);
-
-// const Mapping = movements.map(function (mov) {
-//     return mov * 2;
-// })
-
-
-
-// const ne = movements.map((mov, i, arr) => {
-//     if (mov > 0) {
-//         return `Movement ${i + 1} :: You deposited ${mov} .`;
-//     }
-//     else {
-//         return `Movement ${i + 1} :: You withdrew ${Math.abs(mov)} .`
-//     }
-// });
-// console.log(ne);
 
 
 const accDeposits = function (account) {
@@ -225,24 +171,8 @@ const accDeposits = function (account) {
     labelSumIn.textContent = `${depo} ₹`;
 };
 
-// accDeposits(account1)
 
 
-const accWithdrew = function (account) {
-    const withd =
-        account.movements
-            .filter(mov => mov < 0)
-            .map((mov, i, arr) => {
-                // console.log(arr);
-                return mov * 1
-            })
-            .reduce((acc, mov) => acc + mov, 0);
-    // console.log(withd)
-    labelSumOut.textContent = `${Math.abs(withd)} ₹`
-
-};
-
-// accWithdrew(account1)
 
 const interest = function (money) {
     const hell = money

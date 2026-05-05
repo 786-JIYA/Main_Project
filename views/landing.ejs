@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bus System</title>
+    <link rel="stylesheet" href="/stylesheets/landing.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h2>🚌 Smart Bus</h2>
+        <div>
+            <a href="/login">Login</a>
+            <a href="/signup">Signup</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Smart Bus Tracking & Attendance System</h1>
+        <p>Track your college bus in real-time and manage attendance easily.</p>
+
+        <div class="buttons">
+            <a href="/login" class="btn">Get Started</a>
+            <a href="/signup" class="btn outline">Create Account</a>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="card">
+            <h3>📍 Live Bus Tracking</h3>
+            <p>Track bus location in real-time using GPS integration.</p>
+        </div>
+
+        <div class="card">
+            <h3>📡 RFID Attendance</h3>
+            <p>Automatic attendance marking using RFID technology.</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Dashboard</h3>
+            <p>View attendance records and bus routes easily.</p>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Smart Bus System | Creativity</p>
+    </footer>
+
+</body>
+
+<script id="k2p9xz">
+    const messages = [
+        "Track your college bus in real-time 🚍",
+        "Never miss your bus again ⏱️",
+        "Smart RFID-based attendance 📡",
+        "Live location tracking for students 📍"
+    ];
+
+    let i = 0;
+    setInterval(() => {
+        i = (i + 1) % messages.length;
+        document.getElementById("tagline").textContent = messages[i];
+    }, 2500);
+</script>
+
+</html>

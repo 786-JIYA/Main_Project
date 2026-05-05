@@ -1,3 +1,4 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -6,139 +7,131 @@
 
 body {
     font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #1e1f26, #2c2f3a);
-    color: white;
+    background: #f1f5f9;
 }
 
-/* ================= HEADING ================= */
-
-.heading {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 28px;
-    color: white;
-}
-
-/* ================= LAYOUT ================= */
-
+/* MAIN LAYOUT */
 .main {
     display: flex;
 }
 
-/* ================= SIDEBAR ================= */
-
-#slider {
-    width: 220px;
+/* SIDEBAR */
+#sidebar {
+    width: 230px;
     height: 100vh;
-    background: #6c63ff;
-    padding-top: 20px;
-    box-shadow: 4px 0 15px rgba(0,0,0,0.3);
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+    position: fixed;
 }
 
-.slider_elements {
+.logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#sidebar ul {
     list-style: none;
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-.slider_elements a {
+#sidebar li {
+    margin: 15px 0;
+}
+
+#sidebar a {
     color: white;
     text-decoration: none;
-    display: block;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
     transition: 0.3s;
 }
 
-.slider_elements a:hover {
-    padding-left: 10px;
+#sidebar a:hover {
+    background: #334155;
 }
 
-/* ================= CONTENT AREA ================= */
+/* CONTENT */
 
-.content {
-    flex: 1;
-    padding: 20px;
+
+/* HEADER */
+.page-header h1 {
+    margin-bottom: 20px;
+    color: #1e293b;
 }
 
-/* ================= SEARCH BOX ================= */
-
-.search_container {
-    max-width: 350px;
-    margin: 20px auto;
-    padding: 20px;
+/* FORM CARD */
+.form-card {
+    max-width: 400px;
     background: white;
-    border-radius: 10px;
-    color: #333;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.label {
+/* FORM */
+.form-card label {
     display: block;
-    margin-bottom: 5px;
+    margin-top: 10px;
     font-size: 14px;
+    color: #555;
 }
 
-.search-bar {
+.form-card input {
     width: 100%;
     padding: 10px;
+    margin-top: 5px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    margin-bottom: 15px;
     outline: none;
+    transition: 0.3s;
 }
 
-.search-bar:focus {
-    border-color: #6c63ff;
+.form-card input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
 }
 
-/* ================= BUTTON ================= */
-
-.Add_New {
+/* BUTTON */
+.form-card button {
     width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
-    background: #6c63ff;
+    margin-top: 20px;
+    padding: 12px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
     color: white;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.Add_New:hover {
-    background: #574fd6;
+.form-card button:hover {
+    transform: scale(1.05);
 }
 
-/* ================= TABLE ================= */
+/* CENTER WHOLE BLOCK */
+.content {
+    margin-left: 670px;
+    min-height: 100vh;
+    /* better than height */
 
-table {
-    width: 100%;
-    margin-top: 30px;
-    border-collapse: collapse;
-    background: white;
-    color: #333;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-th {
-    background: #6c63ff;
-    color: white;
-    padding: 12px;
+/* GROUP (title + form) */
+.center-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* space between title and form */
 }
 
-td {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
-}
-
-tr:hover {
-    background: #f5f7ff;
-}
-
-/* ================= ICON ================= */
-
-.fa-trash {
-    color: #e74c3c;
-    cursor: pointer;
+/* TITLE ALIGN */
+.page-header h1 {
+    color: #1e293b;
+    text-align: center;
 }

@@ -19,14 +19,12 @@
         <p class="welcome">Log in to get started</p>
         <h2 class="h2">Enter Place and PRN &rarr;</h2>
 
+        <!-- ✅ NEW INSTRUCTION -->
+
         <form class="login">
-            <input type="text" placeholder="Place" class="login__input login__input--user" />
-            <!-- In practice, use type="password" -->
-            <input type="text" placeholder="PRN" maxlength="4" class="login__input login__input--pin" />
+            <input type="text" " class=" login__input login__input--user" />
+            <input type="text" " maxlength=" 4" class="login__input login__input--pin" />
             <button class="login__btn">&rarr;</button>
-            <div class="container">
-
-
         </form>
     </nav>
 
@@ -37,6 +35,9 @@
                 <p class="balance__label">Bus List</p>
                 <p class="balance__date">
                     As of <span class="date">11/04/2026</span>
+                </p>
+                <p class="demo-note">
+                    👉 For demo use: <strong>Sangli</strong> as Place and your <strong>College PRN</strong>
                 </p>
             </div>
             <p class="balance__value"></p>
@@ -59,16 +60,6 @@
             </div>
         </div>
 
-        <!-- SUMMARY -->
-        <!-- <div class="summary">
-            <p class="summary__label">In</p>
-            <p class="summary__value summary__value--in">0000€</p>
-            <p class="summary__label">Out</p>
-            <p class="summary__value summary__value--out">0000€</p>
-            <p class="summary__label">Interest</p>
-            <p class="summary__value summary__value--interest">0000€</p>
-            <button class="btn--sort">&downarrow; SORT</button>
-        </div> -->
 
         <!-- OPERATION: TRANSFERS -->
         <div class="operation operation--transfer">
@@ -77,13 +68,13 @@
                 <input type="text" class="form__input form__input--from" />
                 <input type="text" class="form__input form__input--where" />
                 <button class="form__btn form__btn--transfer">&rarr;</button>
-                <label class="form__label">From to</label>
-                <label class="form__label">Where</label>
+                <label class="form__label" placeholder="Place (e.g. Sangli)">From to</label>
+                <label class=" form__label" placeholder="(e.g. college)">Where</label>
             </form>
         </div>
 
         <!-- OPERATION: LOAN -->
-        <div class="operation operation--loan">
+        <div class=" operation operation--loan">
             <h2>Track Bus</h2>
             <form class="form form--loan">
                 <input type="number" class="form__input form__input--loan-amount" />
@@ -94,37 +85,9 @@
             </form>
         </div>
 
-        <!-- OPERATION: CLOSE -->
-        <!-- <div class="operation operation--close">
-            <h2>Generate pass</h2>
-            <form class="form form--close">
-                <input type="text" class="form__input form__input--user" />
-                <input type="password" maxlength="6" class="form__input form__input--pin" />
-                <button class="form__btn form__btn--close">&rarr;</button>
-                <label class="form__label">Confirm user</label>
-                <label class="form__label">Confirm PIN</label>
-            </form>
-        </div> -->
-
-        <!--Expense Tracker-->
-        <!-- <div class="expense expense-tracker">
-            <h2>Track-Expense</h2>
-            <form class="form form--close">
-
-                <button class="form__btn form__btn--close">&rarr;</button>
-
-            </form>
-        </div> -->
-
-
-
-        <!-- LOGOUT TIMER -->
-        <!-- <p class="logout-timer">
-            You will be logged out in <span class="timer">05:00</span>
-        </p> -->
     </main>
 
-  
+
 
     <script src="/javascript/student_login.js"></script>
 </body>

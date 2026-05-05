@@ -4,16 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Role</title>
     <link rel="stylesheet" href="/stylesheets/main.css">
-    <title>Login Buttons</title>
 </head>
 
 <body>
-    <h2 class="header">Login to your account</h2>
-    <div class="button-container">
-        <button class="login-button user-login"><a href="/student_login">User Login</a></button>
-        <button class="login-button admin-login"><a href="/login">Admin Login</a></button>
+
+    <div class="container">
+
+        <h1 class="header">Choose Your Role</h1>
+        <p class="subtitle">Access your dashboard</p>
+
+        <div class="cards">
+
+            <!-- USER CARD -->
+            <a href="/student_login" class="card user">
+                <h2>👤 USER</h2>
+                <p>Track bus & view attendance</p>
+            </a>
+
+            <!-- ADMIN CARD -->
+            <a href="/list" class="card admin">
+                <h2>🛠 ADMIN</h2>
+                <p>Manage users & monitor system</p>
+            </a>
+
+        </div>
+
     </div>
+
 </body>
 
 </html>

@@ -7,7 +7,8 @@
 }
 
 html {
-  font-size: 70%; /* Bigger base font */
+  font-size: 70%;
+  /* Bigger base font */
 }
 
 body {
@@ -204,4 +205,15 @@ nav {
     flex-direction: column;
     gap: 1rem;
   }
+}
+
+.demo-note {
+  margin: 10px 0 15px;
+  font-size: 0.99rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.demo-note strong {
+  color: #38bdf8;
 }
