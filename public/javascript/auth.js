@@ -1,6 +1,7 @@
 const SIGNUP_URL = "https://bus-dashboard.onrender.com/signup";
 const LOGIN_URL = "https://bus-dashboard.onrender.com/login";
 
+
 // ----------- SIGNUP -----------
 const signupForm = document.getElementById("signupForm");
 
